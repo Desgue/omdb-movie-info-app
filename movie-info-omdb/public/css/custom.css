@@ -1,0 +1,39 @@
+
+.search-form {
+  margin-top: 60px;
+}
+
+.sizing {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+    border: none;
+    width:100%;
+    height:80%;
+}
+
+.btn-margin{
+  margin-bottom: 15px;
+}
+
+/* Info.ejs */
+
+.box{
+  margin-top: 40px;
+}
+
+img {
+
+  height: 95% !important; 
+}
+
+.well {
+ margin-top: 25px;
+}

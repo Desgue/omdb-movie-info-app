@@ -1,0 +1,12 @@
+<% include partials/header %>
+
+    <div class="container search-form jumbotron">
+        <h2 class='text-center' >Search for a Movie</h2>
+        <form action='/home/results' method='GET' id='searchForm'>
+            <div class="form-group">
+                <input  class='sizing form-control' required type='text' placeholder='Search Term' name='search'>
+            </div>
+        </form>
+    </div>
+
+<% include partials/footer %>

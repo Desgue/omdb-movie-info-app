@@ -1,0 +1,44 @@
+<% include partials/header2 %>
+
+    <div class="container search-form jumbotron">
+        <h2 class='text-center' >Search for a Movie</h2>
+        <form action='/home/results' method='GET' id='searchForm'>
+            <div class="form-group">
+                <input  class='sizing form-control' required type='text' placeholder='Search Term' name='search'>
+            </div>
+        </form>
+    </div>
+
+
+    
+        <div class="container">
+            <div class="row wrapper">
+            
+            <% if(data.Response == 'False'){ %>
+                <div class=' container text-center'> 
+                    <h2 > 404 error </h2>
+                    <p> <%= data.Error %>, try again </p>
+                    <a href = '/home'> Go Home! </a>
+                </div>
+            <% }else{ %>    
+                <% data['Search'].forEach(movie => { %>
+                    <div class="col-md-3">
+                        <div class='text-center thumbnail'>
+                            <img src='<%= movie.Poster %>' >
+                            <h6> <strong><%= movie.Title %></strong> </h6>
+                            <form action='/info' method='GET'>
+                                <input hidden value='<%= movie.imdbID %>' name='movieID' > 
+                                <button type='submit'  class='btn btn-primary btn-margin' >
+                                    Movie Details
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+            </div>
+        </div>
+    
+
+
+<% include partials/footer %>

@@ -1,0 +1,51 @@
+<% include partials/header %>
+
+    <div class="container box">
+        <div class="row">
+            <div class="col-md-4">
+                <img class='thumbnail' src="<%=data.Poster %>">
+            </div>
+            <div class="col-md-8">
+                <h2><%=data.Title %></h2>
+                <ul class="list-group">
+                    <li class='list-group-item' >
+                        <strong>Genre: </strong><%=data.Genre %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>Released: </strong> <%=data.Released %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>Rated: </strong><%=data.Rated %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>IMDB Rating: </strong><%=data.Ratings[0].Value %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>Director: </strong><%=data.Director %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>Writer: </strong> <%=data.Writer %>
+                    </li>
+                    <li class='list-group-item'>
+                        <strong>Actors: </strong> <%=data.Actors %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box card text-white bg-dark mb-3">
+                <div class="card-header">Movie Plot</div>
+                <div class="card-body">
+                    <h3 class = 'text-center'></h3>
+                    <p><%=data.Plot %> </p>
+                    <a href='http://www.imdb.com/title/<%= data.imdbID %>/?ref_=nv_sr_2' class='btn btn-primary'> IMDB Website </a>
+                    <a href='/ ' class='btn btn-secondary'> Return Home </a>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+
+
+
+<% include partials/footer %>
